@@ -1,0 +1,63 @@
+:root{
+    --primary-color:linear-gradient(to right, purple, darkblue);
+    --secondary-color: #081d88;
+    --background-color: hsl(198, 91%, 62%);
+    --text-color: #ffffff;
+    --text-color-grad:#7b21f8;
+}
+navbar{
+    display: flex;
+    align-items:baseline;
+    /* justify-content: center; */
+    /* margin-left: 20px; */
+    height: 40px;
+    width:100%;
+    /* background-color: aqua; */
+}
+#leftdiv{ 
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, purple, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ringhtdiv{
+    margin-top: 5px;
+    display: flex;
+    margin-left: auto;
+    /* float: right; */
+    /* display: flex; */
+    /* height: ; */
+    /* background-color: blue; */
+}
+a{
+    color:var(--text-color);
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#nav-list{
+    display: flex;
+    gap: 20px;
+}
+#dez{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding: 5px;
+    border-radius: 1px;
+    
+
+    /* border-bottom: 2px solid; */
+    /* background-color:blueviolet; */
+}
+#dez:hover{
+    -webkit-text-fill-color: var(--text-color-grad);
+    border-bottom: 2px solid ;
+    border-image: linear-gradient(to right, purple, darkblue) 1;
+    background: linear-gradient(to right, purple, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
