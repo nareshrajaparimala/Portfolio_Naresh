@@ -4,17 +4,30 @@
     --background-color: hsl(198, 91%, 62%);
     --text-color: #ffffff;
     --text-color-grad:#7b21f8;
+ 
+    --dull-color:rgb(192, 170, 200);
 }
 navbar{
+    
     display: flex;
     align-items:baseline;
+    position: sticky;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  top: 0;
+  overflow: hidden;
     /* justify-content: center; */
     /* margin-left: 20px; */
     height: 40px;
     width:100%;
     /* background-color: aqua; */
+    backdrop-filter: blur(10px); /*Blur Effect*/
+    -webkit-backdrop-filter: blur(10px); /*Safari Support*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);/* Optional Border*/
+
 }
 #leftdiv{ 
+    padding-left: 15px;
     font-size: 20px;
     font-weight: bold;
     background: linear-gradient(to right, purple, darkblue);
@@ -49,7 +62,7 @@ ul{
     padding: 5px;
     border-radius: 1px;
     
-
+    transition:.4s ease-in;
     /* border-bottom: 2px solid; */
     /* background-color:blueviolet; */
 }
