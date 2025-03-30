@@ -20,7 +20,7 @@ function Pageone({pageoneRef}){
                 <div className="info1">
                     Backend & DBA Student
                 </div>
-                <p id="paraThought"> A thought is written in this place it can written at <br /> last and a good sentence.</p>
+                <p id="paraThought"> passionate about innovation, problem-solving,<br /> and creating seamless digital experiences</p>
                 {/* skills */}
                 <div className="skillsDisplay">
                     <div className="dez">
