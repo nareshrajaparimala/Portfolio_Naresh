@@ -1,0 +1,133 @@
+@import './navbar.css';
+:root{
+    --contact-background-color:linear-gradient(to right,  rgb(27, 14, 73), rgb(24, 24, 112));
+    --box-color:rgb(65, 64, 80);
+}
+.contacttop{
+    /* padding-top: 20px; */
+    /* background-color: aqua; */
+}
+.contactheaddiv{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+#contact-me-head{
+    background: linear-gradient(to right, purple, darkblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#paracontact{
+    font-size: 12px;
+    color: var(--dull-color);
+}
+#bluestext{
+    margin-left: 5px;
+    font-size: 15px;
+    color: blue;
+}
+.bigdivc{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* background-color: aqua; */
+}
+
+.div1contact{
+    min-width: 200px;
+    flex: 1.2;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--contact-background-color);
+}
+.div2contact{
+    min-width: 300px;
+    flex: 2;
+    color: var(--dull-color);
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--contact-background-color);
+}
+.innercomment{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(50, 48, 63);
+}
+#linedesign{
+    /* border:none; */
+    border: .5px solid rgba(255, 255, 255, 0.3);
+    color: antiquewhite;
+    
+}
+.innercomment{
+    align-items: baseline;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+.commenticon{
+    display: flex;
+    padding-bottom: 10px;
+    color: var(--dull-color);
+}
+.ri-chat-3-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: rgb(63, 78, 154);
+    margin-right: 10px;
+}
+.simplenamediv{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+#namehead{
+    font-size: 16px;
+    /* margin-top: 20px; */
+    /* padding-top: 20px; */
+    /* background-color: aqua; */
+}
+#textname{
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 8px;
+    background: var(--box-color);
+}
+.simplemessagediv{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.simplephotodiv{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+#textmessage{
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 8px;
+    background: var(--box-color);
+}
+.postcomments{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(to right, purple, darkblue);
+   
+}
