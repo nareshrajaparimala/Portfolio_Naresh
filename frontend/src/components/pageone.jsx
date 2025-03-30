@@ -1,9 +1,9 @@
 import React from "react";
 import './styles/pageone.css';
 
-function Pageone(){
+function Pageone({pageoneRef}){
     return(
-        <streem>
+        <streem ref={pageoneRef}>
             <div className="field">
             {/* thought */}
                 <div className="thought">

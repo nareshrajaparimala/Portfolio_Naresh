@@ -1,11 +1,13 @@
 aboutme{
     /* background-color: aqua; */
+    /* background-color: aqua; */
 }
 .headdiv{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
     /* background-color: aqua; */
 }
 .habout{

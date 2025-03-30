@@ -3,7 +3,8 @@ streem{
     display: flex;
     /* margin-top: 8vh; */
     padding-top: 13vh;
-    height:80vh;
+    padding-bottom: 10vh;
+    height:auto;
     width: auto;
     /* background-color: aqua; */
 }

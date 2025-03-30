@@ -1,16 +1,16 @@
-import React from "react";
+import {useRef} from "react";
 import "./styles/navbar.css";
-function Navbar(){
+function Navbar({scrollToPageone, scrollToAbout,scrollToPortfolio ,scrollToContact}){
     return(
 //  navbar 
-       <navbar>
+       <navbar >
             <div id="leftdiv">Naresh.R</div>
             <div className="ringhtdiv">
                 <ul id="nav-list">
-                    <li id="dez"><a href="#">Home</a></li>
-                    <li id="dez"><a href="#">About</a></li>
-                    <li id="dez"><a href="#">Portfolio</a></li>
-                    <li id="dez"><a href="#">Contact</a></li>
+                    <li id="dez"><a onClick={scrollToPageone}>Home</a></li>
+                    <li id="dez"><a  onClick={scrollToAbout}>About</a></li>
+                    <li id="dez"><a onClick={scrollToPortfolio}>Portfolio</a></li>
+                    <li id="dez"><a onClick={scrollToContact}>Contact</a></li>
                 </ul>
             </div>
        </navbar> 

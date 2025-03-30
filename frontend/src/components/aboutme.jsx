@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles/aboutme.css";
-function Aboutme(){
+function Aboutme({ aboutRef }){
     return(
-        <aboutme>
+        <aboutme ref={aboutRef}>
             {/* About ME */}
             <div className="headdiv">
                 <h1 className="habout">About me</h1>

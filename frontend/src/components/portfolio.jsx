@@ -1,6 +1,6 @@
 import { useRef} from "react";
 import './styles/portfolio.css'
-function Portfolio(){
+function Portfolio({portfolioRef}){
     // project handle
     const projectdiv=useRef(null);
     const certicatediv=useRef(null);
@@ -83,7 +83,7 @@ function Portfolio(){
     }
 
     return (
-        <portfolio>
+        <portfolio ref={portfolioRef}>
             <div className="portheaddiv">
                 <h1 id="portheadsent">Portfolio Showcase</h1>
                 <p id="portthough">Explore my journey through projects, certificates and technical expertise.</p><p id="portthough">Each section  represents a milestone in my continuous learning path.</p>
