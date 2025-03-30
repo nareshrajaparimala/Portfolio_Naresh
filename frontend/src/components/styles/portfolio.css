@@ -48,7 +48,7 @@ portfolio{
 .projectsbut{
     background: linear-gradient(to right, purple, darkblue);
 }
-.boxdez:hover{
+.boxdez:hover,.projectsbut:hover,.certificates:hover,.techStack:hover{
     background: linear-gradient(to right, purple, darkblue);
 }
 
@@ -65,7 +65,7 @@ portfolio{
   /* font-size: 30px; */
   /* text-align: center; */
   justify-content:space-between;
-    /* background-color: aquamarine; */
+    /* background-color:transparent; */
 }
 .containerpro{
     width: calc(25% + 12px);
