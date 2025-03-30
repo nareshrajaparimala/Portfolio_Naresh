@@ -3,16 +3,41 @@ import "./styles/contact.css";
 
 function Contact({contactRef}){
     return(
-          <contact className="contacttop" ref={contactRef}>
+    <contact className="contacttop" ref={contactRef}>
         <div className="contactheaddiv">
             <h1 id="contact-me-head">Contact Me</h1>
             <p id="paracontact">Got a question? Send me a message and I'll get back soon. </p>
         </div>
 
+
+       
+
         <div className="bigdivc" >
+             {/* get in touch */}
+            {/* first contact */}
             <div className="div1contact">
-                11
+                <div className="getintouchhead">
+                    <h3 id="getintouchsent">Get in Touch</h3>
+                    <div className="sharicon">
+                        <i class="ri-share-line"></i>
+                    </div>
+                </div>
+                <p id="paraforgetintouch">Have something to discuss? Send me a message and let's talk. </p>
+                    <input type="text" placeholder="Your Name." id="sendername"/>
+                    <input type="text" placeholder="Your Email." id="sendermail"/>
+                    <textarea name="" id="sendermessage" placeholder="Your Message.."></textarea>
+                    <div className="postcontact">
+                        <i class="ri-send-plane-fill"></i>Send Message
+                    </div>
+
             </div>
+
+
+
+
+
+
+
 
             {/* comment */}
             <div className="div2contact">
@@ -43,6 +68,10 @@ function Contact({contactRef}){
 
                 </div>
             </div>
+        </div>
+        {/* copywrites */}
+        <div className="divcopywright">
+            @ 2025 ,All Rights Reserved Naresh.R
         </div>
     </contact>
     );
