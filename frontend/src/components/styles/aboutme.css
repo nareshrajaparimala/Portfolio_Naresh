@@ -21,6 +21,7 @@ aboutme{
 .aboutsap{
     margin-left: 20px;
     display: flex;
+    flex-wrap: wrap;
     /* height:50vh; */
     width: auto;
     padding-top: 50px;
@@ -139,4 +140,11 @@ aboutme{
     flex-grow:2;
     align-items: center;
     justify-content: center;
+    /* background-color: aqua; */
+}
+
+@media (max-width: 850px) {
+    .myphoto{
+        margin-left: 0px;
+    }
 }

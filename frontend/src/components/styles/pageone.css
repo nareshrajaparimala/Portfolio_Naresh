@@ -6,6 +6,7 @@ streem{
     padding-bottom: 10vh;
     height:auto;
     width: auto;
+    flex-wrap: wrap;
     /* background-color: aqua; */
 }
 .field{
@@ -111,4 +112,25 @@ streem{
     margin-top: 35px;
     height: 300px;
 
+}
+@media (max-width: 1050px) {
+    #frontimg{
+        height: 250px;
+    }
+}
+@media (max-width: 950px) {
+    #frontimg{
+        height: 200px;
+    }
+}
+@media (max-width: 850px) {
+    #frontimg{
+        /* margin-top: 30px; */
+        height: 180px;
+    }
+}
+@media (max-width: 850px) {
+    #frontimg{
+        height: 150px;
+    }
 }

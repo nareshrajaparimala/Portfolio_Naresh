@@ -201,28 +201,28 @@ function Portfolio({portfolioRef}){
             <div className="certificatesection" ref={certicatediv}>
                 {/* certificate-1 */}
                 <div className="containercertificate">
-                    <div className="certificateimage">
+                    <div className="certificateimage img11">
                     </div>
                 </div>
                 <div className="containercertificate">
-                    <div className="certificateimage">
+                    <div className="certificateimage img22">
                     </div>
                 </div>
                 <div className="containercertificate">
-                    <div className="certificateimage">
+                    <div className="certificateimage img33">
                     </div>
                 </div>
                 <div className="containercertificate">
-                    <div className="certificateimage">
+                    <div className="certificateimage img44">
                     </div>
                 </div>
-                <div className="containercertificate">
+                {/* <div className="containercertificate">
                     <div className="certificateimage">
                     </div>
                 </div><div className="containercertificate">
                     <div className="certificateimage">
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* tech stack */}

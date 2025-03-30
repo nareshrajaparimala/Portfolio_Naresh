@@ -8,7 +8,6 @@
     --dull-color:rgb(192, 170, 200);
 }
 navbar{
-    
     display: flex;
     align-items:baseline;
     position: sticky;
@@ -29,6 +28,7 @@ navbar{
 #leftdiv{ 
     padding-left: 15px;
     font-size: 20px;
+    z-index: 3;
     font-weight: bold;
     background: linear-gradient(to right, purple, darkblue);
     -webkit-background-clip: text;
@@ -41,7 +41,7 @@ navbar{
     /* float: right; */
     /* display: flex; */
     /* height: ; */
-    /* background-color: blue; */
+    /* background-color: rgb(80, 80, 89); */
 }
 a{
     color:var(--text-color);
@@ -53,6 +53,7 @@ ul{
 #nav-list{
     display: flex;
     gap: 20px;
+    /* background-color: #081d88; */
 }
 #dez{
     display: flex;
@@ -73,4 +74,24 @@ ul{
     background: linear-gradient(to right, purple, darkblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.ri-align-justify{
+    display: none;
+}
+.ri-xrp-line{
+    display: none; 
+}
+@media (max-width: 550px) {
+    .ri-align-justify{
+        display: flex;
+    }
+    navbar{
+        height:auto;
+    }
+    #nav-list{
+        display: none;
+        z-index: 100;
+        /* display: block; */
+        flex-direction: column;
+    }
 }
