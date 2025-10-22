@@ -1,42 +1,46 @@
-import {useRef} from "react";
+import {useState} from "react";
 import "./styles/navbar.css";
-function Navbar({scrollToPageone, scrollToAbout,scrollToPortfolio ,scrollToContact}){
-    const menuref=useRef(null);
-    const line3=useRef(null);
-    const closemenuref=useRef(null);
+
+function Navbar({scrollToPageone, scrollToAbout, scrollToPortfolio, scrollToAchievements, scrollToContact}){
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     
-    const openmenu=()=>{
-        if(menuref.current ){
-            menuref.current.style.display="flex";
-            line3.current.style.display="none";
-            closemenuref.current.style.display="flex";
-        }
-    }
-    const closemenu=()=>{
-        if(menuref.current ){
-            menuref.current.style.display="none";
-            line3.current.style.display="flex";
-            closemenuref.current.style.display="none";
-        }
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     }
 
+    const handleNavClick = (scrollFunction) => {
+        scrollFunction();
+        setIsMenuOpen(false);
+    }
 
     return(
-//  navbar 
-       <navbar >
-            <div id="leftdiv">Naresh.R</div>
-            <div className="ringhtdiv">
-                <ul id="nav-list" ref={menuref}>
-                    <li id="dez"><a onClick={scrollToPageone}>Home</a></li>
-                    <li id="dez"><a  onClick={scrollToAbout}>About</a></li>
-                    <li id="dez"><a onClick={scrollToPortfolio}>Portfolio</a></li>
-                    <li id="dez"><a onClick={scrollToContact}>Contact</a></li>
-                </ul>
-                
+        <nav className="navbar">
+            <div className="nav-brand">Naresh.R</div>
+            
+            <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+                <li className="nav-item">
+                    <a className="nav-link" onClick={() => handleNavClick(scrollToPageone)}>Home</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" onClick={() => handleNavClick(scrollToAbout)}>About</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" onClick={() => handleNavClick(scrollToPortfolio)}>Portfolio</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" onClick={() => handleNavClick(scrollToAchievements)}>Achievements</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" onClick={() => handleNavClick(scrollToContact)}>Contact</a>
+                </li>
+            </ul>
+            
+            <div className="hamburger" onClick={toggleMenu}>
+                <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
+                <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
+                <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
             </div>
-            <i class="ri-align-justify" onClick={openmenu} ref={line3}></i>
-            <i class="ri-xrp-line" onClick={closemenu} ref={closemenuref}></i>
-       </navbar> 
+        </nav>
     );
 }
 export default Navbar;

@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './styles/pageone.css';
 
 function Pageone({pageoneRef}){
+    const [currentText, setCurrentText] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
+    
+    const skills = [
+        "Backend Developer",
+        "DSA Enthusiast", 
+        "Database Expert",
+        "Full Stack Student",
+        "Problem Solver"
+    ];
+    
+    useEffect(() => {
+        const typeText = () => {
+            if (charIndex < skills[currentIndex].length) {
+                setCurrentText(skills[currentIndex].substring(0, charIndex + 1));
+                setCharIndex(charIndex + 1);
+            } else {
+                setTimeout(() => {
+                    setCharIndex(0);
+                    setCurrentIndex((currentIndex + 1) % skills.length);
+                }, 2000);
+            }
+        };
+        
+        const timer = setTimeout(typeText, 100);
+        return () => clearTimeout(timer);
+    }, [charIndex, currentIndex, skills]);
+    
     return(
         <streem ref={pageoneRef}>
+            {/* naresh.R */}
             <div className="field">
             {/* thought */}
                 <div className="thought">
@@ -18,9 +48,9 @@ function Pageone({pageoneRef}){
                     <span id="devop">Developer</span> 
                 </div>
                 <div className="info1">
-                    Backend & DBA Student
+                    {currentText}<span className="cursor">|</span>
                 </div>
-                <p id="paraThought"> passionate about innovation, problem-solving,<br /> and creating seamless digital experiences</p>
+                <p id="paraThought">Welcome to my digital world! I'm a passionate developer who transforms complex problems into elegant solutions. With expertise in full-stack development, I create seamless user experiences that bridge the gap between innovative design and powerful functionality. Every line of code I write is driven by curiosity, precision, and the desire to build something meaningful that makes a difference in people's lives.</p>
                 {/* skills */}
                 <div className="skillsDisplay">
                     <div className="dez">

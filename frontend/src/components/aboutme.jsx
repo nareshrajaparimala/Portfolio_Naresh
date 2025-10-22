@@ -1,75 +1,86 @@
 import React from "react";
 import "./styles/aboutme.css";
+
 function Aboutme({ aboutRef }){
     return(
-        <aboutme ref={aboutRef}>
-            {/* About ME */}
-            <div className="headdiv">
-                <h1 className="habout">About me</h1>
-                <p id="sent1"><i class="ri-bard-fill"></i>
+        <section className="about-section" ref={aboutRef}>
+            <div className="about-header">
+                <h1 className="about-title">About me</h1>
+                <p className="about-subtitle">
+                    <i className="ri-bard-fill"></i>
                     Transforming my Ideas into Digital Experience
-                    <i class="ri-bard-fill"></i> </p>
+                    <i className="ri-bard-fill"></i>
+                </p>
             </div>
-            {/*  sentence and image */}
-            <div className="aboutsap">
-                <div className="aboutsent">
-                    <h1 id="deztex">Hello, I'm</h1>
-                    <h1>Naresh.R</h1>
-                    <p id="aboutpara"> “Passionate about web development, I love building efficient <br />and user-friendly solutions. Skilled in React, Node.js, and <br /> Express, I aim to create seamless digital experiences. <br /> Constantly learning and innovating, I strive to push boundaries in tech.”</p>
-                    <div className="butabout">
-                        <button id="cvdownload" >Download cv <i class="ri-file-text-fill"></i></button>
-                        <button id="viewpro">View Projects <i class="ri-code-line"></i></button>
+            
+            <div className="about-content">
+                <div className="about-text">
+                    <h2 className="greeting">Hello, I'm</h2>
+                    <h2 className="name">Naresh.R</h2>
+                    <p className="description">
+                        "Passionate about web development, I love building efficient and user-friendly solutions. 
+                        Skilled in React, Node.js, and Express, I aim to create seamless digital experiences. 
+                        Constantly learning and innovating, I strive to push boundaries in tech."
+                    </p>
+                    <div className="action-buttons">
+                        <button className="btn-primary">
+                            Download CV <i className="ri-file-text-fill"></i>
+                        </button>
+                        <button className="btn-secondary">
+                            View Projects <i className="ri-code-line"></i>
+                        </button>
                     </div>
                 </div>
-                <div className="aboutpho">
-                    <div className="myphoto">
-                        {/* my photo */}
-                    </div>
+                
+                <div className="about-image">
+                    <div className="profile-photo"></div>
                 </div>
             </div>
-            {/* skills display */}
-            <div className="skillview">
-                <div className="skillbox" id="projects">
-                    {/* symbol */}
-                    <div className="divsymb1">
-                        <div className="symbolcont">
-                        <i class="ri-code-line"></i>
+            
+            <div className="stats-grid">
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <div className="stat-icon">
+                            <i className="ri-code-line"></i>
                         </div>
                         <h4>Total Projects</h4>
-                        <p id="symbolsent">source are avilable in github and hear </p>
+                        <p className="stat-description">Source available on GitHub</p>
                     </div>
-                    <div className="divsymb2">
-                        10 <br /><br /><i class="ri-arrow-right-up-line"></i>
+                    <div className="stat-number">
+                        <span className="number">10</span>
+                        <i className="ri-arrow-right-up-line"></i>
                     </div>
                 </div>
-                <div className="skillbox" id="cirtificate">
-                     {/* symbol */}
-                     <div className="divsymb1">
-                        <div className="symbolcont">
-                        <i class="ri-medal-line"></i>
+                
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <div className="stat-icon">
+                            <i className="ri-medal-line"></i>
                         </div>
                         <h4>Certificates</h4>
-                        <p id="symbolsent">Professional skills added</p>
+                        <p className="stat-description">Professional skills added</p>
                     </div>
-                    <div className="divsymb2">
-                        5 <br /><br /><i class="ri-arrow-right-up-line"></i>
+                    <div className="stat-number">
+                        <span className="number">5</span>
+                        <i className="ri-arrow-right-up-line"></i>
                     </div>
                 </div>
-                <div className="skillbox" id="experience">
-                     {/* symbol */}
-                     <div className="divsymb1">
-                        <div className="symbolcont">
-                        <i class="ri-global-line"></i>
+                
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <div className="stat-icon">
+                            <i className="ri-global-line"></i>
                         </div>
                         <h4>Years of Experience</h4>
-                        <p id="symbolsent">Experience as a student(project)</p>
+                        <p className="stat-description">Experience as a student (project)</p>
                     </div>
-                    <div className="divsymb2">
-                        1 <br /><br /><i class="ri-arrow-right-up-line"></i>
+                    <div className="stat-number">
+                        <span className="number">1</span>
+                        <i className="ri-arrow-right-up-line"></i>
                     </div>
                 </div>
             </div>
-        </aboutme>
+        </section>
     );
 }
 export default Aboutme;

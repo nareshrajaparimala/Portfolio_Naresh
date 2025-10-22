@@ -6,4 +6,12 @@
 *{
   margin: 0px;
   padding: 0px;
+  
+}
+.container-App {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  
 }

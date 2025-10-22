@@ -1,97 +1,113 @@
-:root{
-    --primary-color:linear-gradient(to right, purple, darkblue);
-    --secondary-color: #081d88;
-    --background-color: hsl(198, 91%, 62%);
-    --text-color: #ffffff;
-    --text-color-grad:#7b21f8;
- 
-    --dull-color:rgb(192, 170, 200);
-}
-navbar{
+.navbar {
+    width: 100%;
     display: flex;
-    align-items:baseline;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     position: sticky;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  top: 0;
-  overflow: hidden;
-    /* justify-content: center; */
-    /* margin-left: 20px; */
-    height: 40px;
-    width:100%;
-    /* background-color: aqua; */
-    backdrop-filter: blur(10px); /*Blur Effect*/
-    -webkit-backdrop-filter: blur(10px); /*Safari Support*/
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);/* Optional Border*/
-
+    top: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1000;
 }
-#leftdiv{ 
-    padding-left: 15px;
+
+.nav-brand {
     font-size: 20px;
-    z-index: 3;
     font-weight: bold;
     background: linear-gradient(to right, purple, darkblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.ringhtdiv{
-    margin-top: 5px;
+
+.nav-menu {
     display: flex;
-    margin-left: auto;
-    /* float: right; */
-    /* display: flex; */
-    /* height: ; */
-    /* background-color: rgb(80, 80, 89); */
-}
-a{
-    color:var(--text-color);
-    text-decoration: none;
-}
-ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
 }
-#nav-list{
-    display: flex;
-    gap: 20px;
-    /* background-color: #081d88; */
+
+.nav-item {
+    margin: 0;
 }
-#dez{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-    padding: 5px;
-    border-radius: 1px;
-    
-    transition:.4s ease-in;
-    /* border-bottom: 2px solid; */
-    /* background-color:blueviolet; */
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
-#dez:hover{
-    -webkit-text-fill-color: var(--text-color-grad);
-    border-bottom: 2px solid ;
-    border-image: linear-gradient(to right, purple, darkblue) 1;
+
+.nav-link:hover {
     background: linear-gradient(to right, purple, darkblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, purple, darkblue) 1;
 }
-.ri-align-justify{
+
+.hamburger {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 4px;
 }
-.ri-xrp-line{
-    display: none; 
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
 }
-@media (max-width: 550px) {
-    .ri-align-justify{
+
+@media (max-width: 768px) {
+    .hamburger {
         display: flex;
     }
-    navbar{
-        height:auto;
-    }
-    #nav-list{
-        display: none;
-        z-index: 100;
-        /* display: block; */
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
         flex-direction: column;
+        background: rgba(12, 10, 12, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+    }
+    
+    .nav-link {
+        font-size: 18px;
+        display: block;
+        padding: 15px;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }

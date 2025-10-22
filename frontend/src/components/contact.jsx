@@ -9,8 +9,42 @@ function Contact({contactRef}){
             <p id="paracontact">Got a question? Send me a message and I'll get back soon. </p>
         </div>
 
-
-       
+        {/* Contact Information */}
+        <div className="contact-info-section">
+            <div className="contact-card">
+                <div className="contact-item">
+                    <i className="ri-user-line"></i>
+                    <span>Naresh R</span>
+                </div>
+                <div className="contact-item">
+                    <i className="ri-phone-line"></i>
+                    <a href="tel:+918884509528">+91 8884509528</a>
+                </div>
+                <div className="contact-item">
+                    <i className="ri-mail-line"></i>
+                    <a href="mailto:nareshrajaparimala000@gmail.com">nareshrajaparimala000@gmail.com</a>
+                </div>
+                <div className="contact-item">
+                    <i className="ri-map-pin-line"></i>
+                    <span>Bangalore, Karnataka</span>
+                </div>
+            </div>
+            
+            <div className="social-links">
+                <a href="https://github.com/nareshrajaparimala" className="social-link">
+                    <i className="ri-github-line"></i>
+                </a>
+                <a href="https://linkedin.com/in/naresh-raja-895477276" className="social-link">
+                    <i className="ri-linkedin-line"></i>
+                </a>
+                <a href="https://www.instagram.com/naresh_r_code/" className="social-link">
+                    <i className="ri-instagram-line"></i>
+                </a>
+                <a href="#portfolio" className="social-link">
+                    <i className="ri-briefcase-line"></i>
+                </a>
+            </div>
+        </div>
 
         <div className="bigdivc" >
              {/* get in touch */}

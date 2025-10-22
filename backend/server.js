@@ -15,5 +15,5 @@ app.get("/", (req, res) => {
 import contactRouter from "./routes/contact.js";
 app.use("/contact", contactRouter);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5009;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
